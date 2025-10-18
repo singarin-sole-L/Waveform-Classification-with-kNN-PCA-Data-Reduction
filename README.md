@@ -1,10 +1,9 @@
 # 🟣 Waveform Classification with kNN, PCA & Data Reduction
 
 This project implements and compares **k-Nearest Neighbors (kNN)** and simple **data reduction** techniques on the classic **`waveform.data`** dataset.  
-It also benchmarks **Logistic Regression** and explores an efficient **KD‑Tree**-backed kNN.
+It also benchmarks **Logistic Regression** and Kmeans for this data.
 
-The full study, results, and analysis are in  
-👉 **[`report.pdf`](./report.pdf)** (recommended read).
+The full study, results, and analysis are in **[`report.pdf`](./report.pdf)** (recommended read).
 
 ---
 
@@ -18,7 +17,6 @@ The full study, results, and analysis are in
   - **CNN** (Condensed Nearest Neighbor) for sample reduction
   - **PCA** for feature reduction (2D viz + higher‑dim experiments)
   - **Logistic Regression** baseline
-  - **KD‑Tree** accelerated inference for kNN
 - Metrics reported: accuracy (primary), precision, recall
 - Normalization: Z‑score (feature‑wise)
 
@@ -62,11 +60,11 @@ The full study, results, and analysis are in
 | kNN (k=84)             | 0.879    | 0.880     | 0.878  |
 | Logistic Regression    | 0.872    | 0.872     | 0.871  |
 
-> K‑Means clustering is also explored for visualization, but as an unsupervised method its labels do not directly map to class IDs without post‑mapping.
+> K‑Means clustering is also compared, but as an unsupervised method its labels do not directly map to class IDs without post‑mapping.
 
 ---
 
-## 🎯 How to Run
+## How to Run
 
 ### 1) Set up environment
 ```bash
@@ -86,29 +84,22 @@ Inside the notebook you will find:
 - Cleaning (RENN) and reduction (CNN)
 - PCA visualization (2D) and higher‑dim projections
 - kNN vs Logistic Regression comparisons
-- Optional KD‑Tree acceleration
 
 ---
 
-## 📊 Notes
+## Notes
 
 - Classes are **balanced (~33% each)**, so **accuracy** is a meaningful primary metric.
 - PCA is applied **after** normalization (Z‑score).
 - Reported timings are **inference‑oriented** and depend on hardware.
-- KD‑Tree yields similar accuracy to vanilla kNN, with lower query time on reduced sets.
 
 ---
 
-## 🚀 Future Work
-
-- Weighted kNN and metric learning (e.g., Mahalanobis / LMNN)
-- Approximate nearest neighbors (FAISS / Annoy / HNSW) for large‑scale speedups
-- t‑SNE / UMAP projections for non‑linear visualization
-- Robustness tests under synthetic noise or feature corruptions
-
+## Future Work
+Future work should focus on implementing a KD-Tree in the view to speed-up the calculation of the kNN.
 ---
 
-## 🧑‍💻 Authors
+## Authors
 
 **Alexis Zawada** · **Livio Singarin‑Solé**  
 University of Jean Monnet, France  
