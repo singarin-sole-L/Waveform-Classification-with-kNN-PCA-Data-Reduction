@@ -7,7 +7,7 @@ The full study, results, and analysis are in **[`report.pdf`](./report.pdf)** (r
 
 ---
 
-## 📘 Overview
+## Overview
 
 - Dataset: 5000 samples, 21 features, 3 classes (balanced)
 - Split used in the study: 4000 train / 1000 test
@@ -24,7 +24,7 @@ The full study, results, and analysis are in **[`report.pdf`](./report.pdf)** (r
 
 ---
 
-## 🧩 Project Structure
+## Project Structure
 
 ```
 ├── waveform_classification.ipynb   # Experiments, plots, comparisons
@@ -34,7 +34,7 @@ The full study, results, and analysis are in **[`report.pdf`](./report.pdf)** (r
 
 ---
 
-## 🧠 Key Results (from the report)
+## Key Results (from the report)
 
 ### Fine-tuning $k$
 <img width="584" height="455" alt="accuracy_according_to_k" src="https://github.com/user-attachments/assets/456fd624-5f10-4c63-b478-03de6e52ee24" />
